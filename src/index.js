@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+//1 - STORE - ALL DATA
+
+//2 - ACTION
+
+// All logic starts with action
+
+const addToCart = () => {
+  return {
+    type: "ADD_TO_CART"
+  }
+}
+
+
+//3 - REDUCER
+
+//4 - DISPATCH
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
