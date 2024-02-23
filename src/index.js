@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { createStore }  from 'redux'
 
 
 
 //1 - STORE - ALL DATA
 
-let store = createStore(cart)
 
 //2 - ACTION
       // All logic starts with action that user/customer could possibly do OR WANT TO DO  on our website (FOR EXAMPLE WE HAVE ONLINE STORE)
@@ -51,13 +50,23 @@ const cart = (state = 0, action) => {
   }
 }
 
+let store = createStore(cart);
+store.subscribe(()=> console.log(store.getState()))
+
 
 //4 - DISPATCH
       //this is the only way to change the state! we need to call store.dispatch() and pass in an action object 
 
 store.dispatch(addToCart())
-
-
+store.dispatch(addToCart())
+store.dispatch(addToCart())
+store.dispatch(addToCart())
+store.dispatch(addToCart())
+store.dispatch(addToCart())
+store.dispatch(addToCart())
+store.dispatch(removeItem())
+store.dispatch(removeItem())
+store.dispatch(removeItem())
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
