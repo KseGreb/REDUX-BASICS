@@ -6,10 +6,19 @@ import reportWebVitals from './reportWebVitals';
 // import { createStore }  from 'redux'
 import {legacy_createStore as createStore} from 'redux'
 import cartReducer from './reducers/cart-reducer';
-
+import { addToCart, removeItem } from './actions';
 
 let store = createStore(cartReducer)
 store.subscribe(()=> console.log(store.getState()))
+
+store.dispatch(addToCart());
+store.dispatch(addToCart());
+store.dispatch(addToCart());
+store.dispatch(addToCart());
+store.dispatch(removeItem());
+store.dispatch(removeItem());
+
+
 
 // //1 - STORE - ALL DATA
 
